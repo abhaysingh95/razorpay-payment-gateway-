@@ -8,10 +8,10 @@ const home = () => {
 
   const checkoutHandler =async (amount ) => {
 
-    const {data: {key}} = await axios.get("http://localhost:4000/api/getkey")
+    const {data: {key}} = await axios.get("https://razorpay-payment-gateway-server.onrender.com/api/getkey")
 
     const {data:{order}} = await axios.post(
-      'http://localhost:4000/api/checkout', {
+      'https://razorpay-payment-gateway-server.onrender.com/api/checkout', {
         amount
       })
 
@@ -23,7 +23,7 @@ const home = () => {
         description: "A Software Engineer",
         image: "https://avatars.githubusercontent.com/u/128255771?v=4",
         order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-        callback_url: "http://localhost:4000/api/paymentverification",
+        callback_url: "https://razorpay-payment-gateway-server.onrender.com/api/paymentverification",
         prefill: {
             name: "Your Name",
             email: "yourmail@example.com",
