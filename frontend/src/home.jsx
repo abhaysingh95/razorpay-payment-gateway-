@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box,  Center,  Stack } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 import Card from './Card'
 import axios from "axios"
 
